@@ -83,8 +83,7 @@ $ php artisan migrate
 ***シーディングファイルが、２つあり、以下の順番で実行しないと、エラーとなります。***
 以下のコマンドで、データベースにサンプルデータを挿入するためにシーディングを実行します。
 
-1. $ php artisan db:seed --class=CategoriesTableSeede
-r
+1. $ php artisan db:seed --class=CategoriesTableSeeder
 2. $ php artisan db:seed --class=ContactsTableSeeder
 
 
