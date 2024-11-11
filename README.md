@@ -24,9 +24,13 @@ APP_TIMEZONE=Asia/Tokyo
 APP_LOCALE=ja
 
 DB_HOST=mysql
+
 DB_PORT=3306
+
 DDB_DATABASE=laravel_db
+
 DB_USERNAME=laravel_user
+
 DB_PASSWORD=laravel_pass
 
 
