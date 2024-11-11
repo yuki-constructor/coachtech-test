@@ -94,10 +94,15 @@ r
  もし、エラーとなった場合、storage および bootstrap/cache ディレクトリに書き込み権限を設定することで改善するか確認してください。
 
   $ cd src
+  
   $ sudo chown -R www-data:www-data storage bootstrap/cache
+  
   $ php artisan cache:clear
+  
   $ php artisan config:clear
+  
   $ php artisan view:clear
+  
   $ php artisan route:clear
   
 
