@@ -13,8 +13,9 @@ git clone git@github.com:yuki-constructor/coachtech-test.git
 
 ### ⓶.env ファイルの作成
 
-以下のコマンドで、 .env.example を .env にコピーします。
+以下のコマンドで、 srcディレクトリに移動し、.env.example を .env にコピーします。
 
+cd src/
 cp .env.example .env
 
 
@@ -57,20 +58,26 @@ docker-compose exec php bash
 
 composer install
 
+### ⓺アプリケーションキーの生成
 
-### ⓺データベースのマイグレーション
+以下のコマンドで、Laravel のアプリケーションキーを生成します。
+
+php artisan key:generate
+
+
+### ⓻データベースのマイグレーション
 
 以下のコマンドで、データベースをセットアップするために、マイグレーションを実行します。
 
 php artisan migrate
 
 
-### ⓻アプリケーションの動作確認
+### ⓼アプリケーションの動作確認
 
  http://localhost:8080 にアクセスすることで、phpMyAdminを確認できます。
 
 
-### ⓼データベースのシーディング
+### ⑨データベースのシーディング
 
 ***シーディングファイルが、２つあり、以下の順番で実行しないと、エラーとなります。***
 以下のコマンドで、データベースにサンプルデータを挿入するためにシーディングを実行します。
@@ -80,7 +87,7 @@ r
 2. php artisan db:seed --class=ContactsTableSeeder
 
 
-### ⑨アプリケーションの動作確認
+### ⓾アプリケーションの動作確認
 
  http://localhost にアクセスすることで、アプリケーションが動作していることを確認できます。
 
