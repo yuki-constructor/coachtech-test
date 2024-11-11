@@ -8,7 +8,7 @@
 
 以下のコマンドで、Git リポジトリをクローンします。
 
-git clone git@github.com:yuki-constructor/coachtech-test.git cd your-project-name
+git clone git@github.com:yuki-constructor/coachtech-test.git
 
 
 ### ⓶.env ファイルの作成
