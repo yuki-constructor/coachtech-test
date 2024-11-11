@@ -16,6 +16,7 @@ $ git clone git@github.com:yuki-constructor/coachtech-test.git
 以下のコマンドで、 srcディレクトリに移動し、.env.example を .env にコピーします。
 
 $ cd src/
+
 $ cp .env.example .env
 
 
