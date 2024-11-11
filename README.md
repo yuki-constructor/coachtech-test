@@ -82,7 +82,7 @@ r
 - Laravel Framework 11.3.2
 
 ## ER図
-< - - - 作成したER図の画像 - - - >
+![ER図](https://github.com/user-attachments/assets/f64c5674-6d4e-445c-aaad-93b042ec3cd8)
 
 ## URL
 - 開発環境：git@github.com:yuki-constructor/coachtech-test.git
