@@ -17,11 +17,14 @@ git clone git@github.com:yuki-constructor/coachtech-test.git cd your-project-nam
 
 cp .env.example .env
 
+
 .env ファイルを開いて、以下の設定を変更します。
 
 APP_TIMEZONE=Asia/Tokyo
 
+
 APP_LOCALE=ja
+
 
 DB_HOST=mysql
 
