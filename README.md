@@ -8,15 +8,15 @@
 
 以下のコマンドで、Git リポジトリをクローンします。
 
-git clone git@github.com:yuki-constructor/coachtech-test.git
+$ git clone git@github.com:yuki-constructor/coachtech-test.git
 
 
 ### ⓶.env ファイルの作成
 
 以下のコマンドで、 srcディレクトリに移動し、.env.example を .env にコピーします。
 
-cd src/
-cp .env.example .env
+$ cd src/
+$ cp .env.example .env
 
 
 .env ファイルを開いて、以下の設定を変更します。
@@ -42,34 +42,34 @@ DB_PASSWORD=laravel_pass
 
 以下のコマンドで、Dockerコンテナを起動します。
 
-docker-compose up --build -d
+$ docker-compose up --build -d
 
 
 ### ⓸PHPコンテナ内にログイン
 
 以下のコマンドで、PHPコンテナに接続します。
 
-docker-compose exec php bash
+$ docker-compose exec php bash
 
 
 ### ⓹composerのインストール
 
 以下のコマンドで、composerをインストールします。
 
-composer install
+$ composer install
 
 ### ⓺アプリケーションキーの生成
 
 以下のコマンドで、Laravel のアプリケーションキーを生成します。
 
-php artisan key:generate
+$ php artisan key:generate
 
 
 ### ⓻データベースのマイグレーション
 
 以下のコマンドで、データベースをセットアップするために、マイグレーションを実行します。
 
-php artisan migrate
+$ php artisan migrate
 
 
 ### ⓼アプリケーションの動作確認
@@ -82,15 +82,24 @@ php artisan migrate
 ***シーディングファイルが、２つあり、以下の順番で実行しないと、エラーとなります。***
 以下のコマンドで、データベースにサンプルデータを挿入するためにシーディングを実行します。
 
-1. php artisan db:seed --class=CategoriesTableSeede
+1. $ php artisan db:seed --class=CategoriesTableSeede
 r
-2. php artisan db:seed --class=ContactsTableSeeder
+2. $ php artisan db:seed --class=ContactsTableSeeder
 
 
 ### ⓾アプリケーションの動作確認
 
  http://localhost にアクセスすることで、アプリケーションが動作していることを確認できます。
 
+ もし、エラーとなった場合、storage および bootstrap/cache ディレクトリに書き込み権限を設定することで改善するか確認してください。
+
+  $ cd src
+  $ sudo chown -R www-data:www-data storage bootstrap/cache
+  $ php artisan cache:clear
+  $ php artisan config:clear
+  $ php artisan view:clear
+  $ php artisan route:clear
+  
 
 ## 使用技術(実行環境)
 - Laravel Framework 11.3.2
