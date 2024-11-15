@@ -91,19 +91,9 @@ $ php artisan migrate
 
  http://localhost にアクセスすることで、アプリケーションが動作していることを確認できます。
 
- もし、エラーとなった場合、storage および bootstrap/cache ディレクトリに書き込み権限を設定することで改善するか確認してください。
+ もし、エラーとなった場合、src ディレクトリに書き込み権限を設定することで改善するか確認してください。
 
-  $ cd src
-  
-  $ sudo chown -R www-data:www-data storage bootstrap/cache
-  
-  $ php artisan cache:clear
-  
-  $ php artisan config:clear
-  
-  $ php artisan view:clear
-  
-  $ php artisan route:clear
+ sudo chmod -R 777 src/*
   
 
 ## 使用技術(実行環境)
