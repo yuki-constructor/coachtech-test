@@ -27,6 +27,7 @@ APP_TIMEZONE=Asia/Tokyo
 
 APP_LOCALE=ja
 
+DB_CONNECTION=mysql
 
 DB_HOST=mysql
 
